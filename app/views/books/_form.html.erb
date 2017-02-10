@@ -1,0 +1,44 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+      <%= pluralize(@book.errors.count, "error") %>
+      <% @book.errors.full_messages.each do |msg| %>
+      <%= msg %>
+      <% end %>
+  <% end %>
+  <br>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :auther %><br>
+    <%= f.text_field :auther %>
+  </p>
+
+  <p>
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.label :number_of_pages %><br>
+    <%= f.text_field :number_of_pages %>
+  </p>
+
+  <p>
+    <%= f.label :publisher %><br>
+    <%= f.text_field :publisher %>
+  </p>
+
+<br>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
