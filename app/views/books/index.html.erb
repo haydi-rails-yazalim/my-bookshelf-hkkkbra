@@ -4,6 +4,7 @@
           <%= link_to 'Show', book %>
           <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Delete The Book ?' } %>
           <%= link_to 'Edit', edit_book_path(book) %>
+          <%= button_to "Add", add_to_list_path(book.id)%>
           <br>
 
     <% end %>
