@@ -40,12 +40,9 @@ def destroy
   redirect_to books_path
 end
 
-<<<<<<< HEAD
 def add
   List.create(user_id: current_user.id, book_id: params[:id])
 end
-=======
->>>>>>> 6b0f5c6f43b4ee995220a1ae0e5b0e886517bd0d
 
  private
 
