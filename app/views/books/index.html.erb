@@ -1,14 +1,13 @@
 <% @books.each do |book| %>
           <%"#{book.id}. book " %>
-          <%= book.name %>
-          <%= link_to 'Show', book %>
-          <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Delete The Book ?' } %>
-          <%= link_to 'Edit', edit_book_path(book) %>
-          <%= button_to "Add", add_to_list_path(book.id)%>
+          <font face="Times New Roman" size="5" color="#9932CC"> <%= book.name %> </font>  <br><br>
+          <%= link_to 'Görüntüle', book %>
+          <%= link_to 'Düzenle', edit_book_path(book) %>
+          <%= link_to 'Sil', book, method: :delete, data: { confirm: 'Kitap silinsin mi??' } %>
+          <%= button_to "Kitaplığıma Ekle", add_to_list_path(book.id)%>
 
           <br>
 
     <% end %>
 <br>
-
-<%= link_to 'New Book', new_book_path %>
+<font face="Times New Roman" size="10"> <%= link_to 'Yeni Kitap', new_book_path %> </font>  <br><br>
